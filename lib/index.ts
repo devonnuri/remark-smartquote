@@ -9,7 +9,7 @@ export type Quotes = [string, string, string, string];
  */
 export interface RemarkSmartquoteOptions {
   /**
-   * An array of qutoes to use. [opening-single, closing-single, opening-double, closing-double]
+   * An array of qutoes to use. `[opening-single, closing-single, opening-double, closing-double]`
    *
    * @defaultValue ['‘', '’', '“', '”']
    */

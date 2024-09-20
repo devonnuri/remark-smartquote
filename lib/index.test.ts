@@ -16,6 +16,10 @@ describe('remark-smartquote', function () {
           `"The horse eats no cucumber salad" was the first sentence ever uttered on the 'telephone.'\n`,
           `“The horse eats no cucumber salad” was the first sentence ever uttered on the ‘telephone.’\n`,
         ],
+        [
+          `"I thought it was 'If a body catch a body,'" I said.\n`,
+          `“I thought it was ‘If a body catch a body,’” I said.\n`,
+        ],
       ];
 
       for (const [input, expected] of tests) {
