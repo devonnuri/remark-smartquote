@@ -20,7 +20,6 @@ describe('remark-smartquote', function () {
 
       for (const [input, expected] of tests) {
         const result = await defaultCompiler.process(input);
-        console.log(result);
         assert.equal(
           String(result),
           expected,
@@ -34,6 +33,24 @@ describe('remark-smartquote', function () {
         [
           `"The 'horse' eats no cucumber salad" was the first sentence ever uttered on the 'telephone.'\n`,
           `“The ‘horse’ eats no cucumber salad” was the first sentence ever uttered on the ‘telephone.’\n`,
+        ],
+      ];
+
+      for (const [input, expected] of tests) {
+        const result = await defaultCompiler.process(input);
+        assert.equal(
+          String(result),
+          expected,
+          `input: ${JSON.stringify(input)}`,
+        );
+      }
+    });
+
+    it('korean test', async function () {
+      const tests: [string, string][] = [
+        [
+          `민법 제1조는 "민사에 관하여 법률에 규정이 없으면 관습법에 의하고 관습법이 없으면 조리에 의한다."라고 규정하고 있다.\n`,
+          `민법 제1조는 “민사에 관하여 법률에 규정이 없으면 관습법에 의하고 관습법이 없으면 조리에 의한다.”라고 규정하고 있다.\n`,
         ],
       ];
 
