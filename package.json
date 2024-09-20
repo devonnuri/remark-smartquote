@@ -1,0 +1,63 @@
+{
+  "name": "remark-smartquote",
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "Quotes transformer plugin for Remark",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc --pretty -p . -d",
+    "watch": "tsc -w -p .",
+    "test": "mocha --color --require tsx lib/**/*.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonnuri/remark-smartquote.git"
+  },
+  "keywords": [
+    "markdown",
+    "quotes",
+    "remark",
+    "plugin"
+  ],
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/index.d.ts",
+    "lib/index.js",
+    "lib/index.js.map",
+    "LICENSE"
+  ],
+  "author": "Huiseong Yang <me@onnuri.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devonnuri/remark-smartquote/issues"
+  },
+  "homepage": "https://github.com/devonnuri/remark-smartquote#readme",
+  "dependencies": {
+    "@types/mdast": "^4.0.4",
+    "mdast-util-find-and-replace": "^3.0.1",
+    "unified": "^11.0.5",
+    "vfile": "^6.0.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "^22.5.5",
+    "concurrently": "^9.0.1",
+    "mocha": "^10.7.3",
+    "prettier": "^3.3.3",
+    "remark": "^15.0.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "packageManager": "yarn@4.5.0"
+}
