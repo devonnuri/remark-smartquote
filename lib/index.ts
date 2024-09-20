@@ -2,8 +2,6 @@ import type { Node, Parents, Root, Text } from 'mdast';
 import type { Plugin } from 'unified';
 import { VisitorResult, visitParents } from 'unist-util-visit-parents';
 
-export type Quotes = [string, string, string, string];
-
 /**
  * Configuration of remark-smartquote plugin.
  */
@@ -13,7 +11,7 @@ export interface RemarkSmartquoteOptions {
    *
    * @defaultValue ['‘', '’', '“', '”']
    */
-  quotes: Quotes;
+  quotes: [string, string, string, string];
 }
 
 const DEFAULT_SETTINGS: RemarkSmartquoteOptions = {
