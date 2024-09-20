@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=18"
   },
-  "description": "Quotes transformer plugin for Remark",
+  "description": "Context-aware quote plugin for Remark",
   "exports": {
     ".": {
       "import": {
