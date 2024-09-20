@@ -2083,7 +2083,7 @@ __metadata:
     remark: "npm:^15.0.1"
     tsx: "npm:^4.19.1"
     typescript: "npm:^5.6.2"
-    unified: "npm:^11.0.5"
+    unified: "npm:^11.0.0"
     unist-util-visit-parents: "npm:^6.0.1"
     vfile: "npm:^6.0.3"
   languageName: unknown
@@ -2425,7 +2425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unified@npm:^11.0.0, unified@npm:^11.0.5":
+"unified@npm:^11.0.0":
   version: 11.0.5
   resolution: "unified@npm:11.0.5"
   dependencies:
