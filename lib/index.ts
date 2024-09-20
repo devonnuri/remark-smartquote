@@ -1,6 +1,9 @@
 import type { Root } from 'mdast';
-import { findAndReplace } from 'mdast-util-find-and-replace';
 import type { Plugin } from 'unified';
+
+import { replaceQuotes } from './replace.js';
+
+export type Quotes = [string, string, string, string];
 
 /**
  * Configuration of remark-smartquote plugin.
@@ -11,7 +14,7 @@ export interface RemarkSmartquoteOptions {
    *
    * @defaultValue ['‘', '’', '“', '”']
    */
-  quotes: [string, string, string, string];
+  quotes: Quotes;
 }
 
 const DEFAULT_SETTINGS: RemarkSmartquoteOptions = {
@@ -23,18 +26,9 @@ const plugin: Plugin<
   Root
 > = (options) => {
   const settings = { ...DEFAULT_SETTINGS, ...options };
-  const [singleOpen, singleClose, doubleOpen, doubleClose] = settings.quotes;
 
   return function (tree) {
-    findAndReplace(tree, [
-      /'(.*?)'(?!')/g,
-      (_: string, content: string) => `${singleOpen}${content}${singleClose}`,
-    ]);
-
-    findAndReplace(tree, [
-      /"(.*?)"(?!")/g,
-      (_: string, content: string) => `${doubleOpen}${content}${doubleClose}`,
-    ]);
+    replaceQuotes(tree, settings.quotes);
   };
 };
 

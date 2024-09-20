@@ -29,11 +29,9 @@
     "remark",
     "plugin"
   ],
-  "types": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib/index.d.ts",
-    "lib/index.js",
-    "lib/index.js.map",
+    "dist",
     "LICENSE"
   ],
   "author": "Huiseong Yang <me@onnuri.dev>",
@@ -44,8 +42,8 @@
   "homepage": "https://github.com/devonnuri/remark-smartquote#readme",
   "dependencies": {
     "@types/mdast": "^4.0.4",
-    "mdast-util-find-and-replace": "^3.0.1",
     "unified": "^11.0.5",
+    "unist-util-visit-parents": "^6.0.1",
     "vfile": "^6.0.3"
   },
   "devDependencies": {
